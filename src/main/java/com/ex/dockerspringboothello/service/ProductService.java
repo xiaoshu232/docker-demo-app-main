@@ -22,6 +22,10 @@ public class ProductService {
 		return repo.getByName(name);
 	}
 	
+	public List<Product> getById(int id){
+		return repo.getById(id);
+	}
+	
 	public void save(Product product) {
 		repo.save(product);
 	}

@@ -12,7 +12,7 @@ import com.ex.dockerspringboothello.entity.Product;
 import com.ex.dockerspringboothello.service.ProductService;
 
 @RestController
-@RequestMapping("/product")
+@RequestMapping("/api")
 public class ProductController {
 	
 	@Autowired
@@ -23,9 +23,14 @@ public class ProductController {
 		return service.getAll();
 	}
 	
-	@GetMapping("/product/{name}")
+	@GetMapping("/product/name/{name}")
 	public List<Product> getByName(@PathVariable String name){
 		return service.getByName(name);
+	}
+	
+	@GetMapping("/product/id/{id}")
+	public List<Product> getById(@PathVariable int id){
+		return service.getById(id);
 	}
 
 }

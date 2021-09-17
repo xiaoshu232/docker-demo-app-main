@@ -28,6 +28,10 @@ public class ProductRepo {
 				.contains(name)).collect(Collectors.toList());
 	}
 	
+	public List<Product> getById(int id) {
+		return products.stream().filter(p -> p.getId() == id).collect(Collectors.toList());
+	}
+	
 	public void save(Product product) {
 		products.add(product);
 	}
