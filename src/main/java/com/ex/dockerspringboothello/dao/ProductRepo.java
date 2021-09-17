@@ -1,5 +1,6 @@
 package com.ex.dockerspringboothello.dao;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -10,7 +11,7 @@ import com.ex.dockerspringboothello.entity.Product;
 @Repository
 public class ProductRepo {
 	
-	private List<Product> products;
+	private List<Product> products = new ArrayList<>();
 	
 	{
 		products.add(new Product(1, "Java book", 25.25));
