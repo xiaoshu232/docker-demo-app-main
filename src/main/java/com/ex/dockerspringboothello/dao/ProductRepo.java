@@ -15,8 +15,8 @@ public class ProductRepo {
 	
 	{
 		products.add(new Product(1, "Java book", 25.25));
-		products.add(new Product(1, "Spring book", 35));
-		products.add(new Product(1, "Microservices book", 49.99));
+		products.add(new Product(2, "Spring book", 35));
+		products.add(new Product(3, "Microservices book", 49.99));
 	}
 	
 	public List<Product> getAll(){
